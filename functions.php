@@ -182,3 +182,10 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+//Initialize the update checker.
+require 'theme-updates/theme-update-checker.php';
+$minimus_update_checker = new ThemeUpdateChecker(
+    'minimus',
+    'https://rawgit.com/RiccardoZaffalon/minimus/master/info.json'
+);
